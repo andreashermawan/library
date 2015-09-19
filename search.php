@@ -34,20 +34,7 @@
 		    </div>
 		    <div>
 
-		<div class="table responsive">
-        <table class="table table-striped">
-          <tr>
-            
-            <td>title</td>
-            <td>author</td>
-            <td>Year</td>
-            <td>country</td>
-            <td>image</td>
-          
-          </tr>
-
-
-		<?php 
+	<?php 
        
 		if(isset($_POST['book_country']) || isset($_POST['book_author']) || isset($_POST['book_title'])){
 			$book_title = filter_var($_POST['book_title'], FILTER_SANITIZE_STRING);
@@ -83,7 +70,20 @@
 			$result = $conn->query($sql);
 
 			// reading about
-        	if($result->num_rows > 0){
+        	if($result->num_rows > 0) {
+    ?>
+    			<div class="table responsive">
+        			<table class="table table-striped">
+          			<tr>
+            
+	            		<td>title</td>
+	            		<td>author</td>
+				        <td>Year</td>
+				        <td>country</td>
+				        <td>image</td>
+          
+          			</tr>
+    <?php
           		while($row = $result->fetch_assoc()){ // start loop
               		// print_r($row);
             		if(isset($_GET["update_book_id"]) && $_GET["update_book_id"] == $row['book_id']){
@@ -99,7 +99,7 @@
 
             		} else {
               			// normal rows
-        ?>
+    ?>
             			<tr>
            
                 			<td><?php echo $row["title"]; ?></td>
@@ -109,32 +109,30 @@
                 			<td><img src="images/<?php echo $row["thumbnail_url"] ?>"></td>
               
             			</tr>
-        <?php
+    <?php
             		}
         
-            	if($row_class == "odd"){
-              		$row_class = "even";
-            	} else if($row_class == "even") {
-              		$row_class = "odd";
-            	}
-          	}
-        } else {
-        ?>
-        	<div>
-        		<h1>No results match search criteria</h1>
-        	</div>
-        <?php
-        }
-        //echo "</table>";
+            		if($row_class == "odd"){
+              			$row_class = "even";
+            		} else if($row_class == "even") {
+              			$row_class = "odd";
+            		}
+          		}
+    ?>
+    				</table>
+       			</div> 
+    <?php
+        	} else {
+    ?>
+        		<div>
+        			<h1>No results match search criteria</h1>
+        		</div>
+    <?php
+        	}
 
-
-        $conn->close();
-
-        }
-        ?>
-        </table>
-       </div> 
-
+        	$conn->close();
+    	}
+    ?>
 
 	   </div>
 		</div>
