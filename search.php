@@ -80,6 +80,80 @@ echo "x";
 		            </div>
 				</form>
 		    </div>
+		    <div>
+
+		          <div class="table responsive">
+        <table class="table table-striped">
+          <tr>
+            
+            <td>title</td>
+            <td>author</td>
+            <td>Year</td>
+            <td>country</td>
+            <td>image</td>
+          
+          </tr>
+
+
+       <?php 
+       // reading current books
+//$sql = "SELECT * FROM books";
+$sql = "SELECT * FROM books INNER JOIN images ON books.book_id = images.book_id";
+$result = $conn->query($sql);
+
+// reading about
+        if($result->num_rows > 0){
+          while($row = $result->fetch_assoc()){ // start loop
+              // print_r($row);
+            if(isset($_GET["update_book_id"]) && $_GET["update_book_id"] == $row['book_id']){
+              // row to update
+              echo "<form method='POST' action='".$_SERVER["PHP_SELF"]."'><tr>";
+              echo "<input type='hidden' name='update_flag' value=".$row['book_id'] .">";
+              echo "<td><input name='book_title' value=".$row["title"]."> </td>";
+              echo "<td><input name='book_author' value=".$row["author"]."> </td>";
+              echo "<td><input name='book_year' value=".$row["year"]."> </td>";
+              echo "<td><input name='book_country' value=".$row["country"]."> </td>";
+              // echo "<td>submit</td></form></tr>";
+              
+
+            } else {
+              // normal rows
+              ?>
+            <tr>
+           
+                <td><?php echo $row["title"]; ?></td>
+                <td><?php echo $row["author"]; ?></td>
+                <td><?php echo $row["year"]; ?></td>
+                <td><?php echo $row["country"]; ?></td>
+                 <!-- <a href="mypage.php?delete_id=2">Delete</a> -->
+                <td><img src="images/<?php echo $row["thumbnail_url"] ?>"></td>
+              
+                
+            </tr>
+              <?php
+            }
+        
+            if($row_class == "odd"){
+              $row_class = "even";
+            } else if($row_class == "even") {
+              $row_class = "odd";
+            }
+          }
+        } else {
+          echo "0 results; nope";
+        }
+        echo "</table>";
+
+
+        $conn->close();
+
+        
+        ?>
+        </table>
+       </div> 
+
+
+		    </div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
