@@ -73,8 +73,13 @@
 	    		die("Connection failed: " . $conn->connect_error);
 			}
 
-
-			$sql = "SELECT * FROM books INNER JOIN images ON books.book_id = images.book_id";
+			$sql = "SELECT * 
+			        FROM books 
+			        	INNER JOIN images ON books.book_id = images.book_id 
+			        WHERE 
+			        	title LIKE '%$book_title%' or 
+			         	author LIKE '%$book_author%' or 
+			        	country LIKE '%$book_country%'";
 			$result = $conn->query($sql);
 
 			// reading about
@@ -95,17 +100,15 @@
             		} else {
               			// normal rows
         ?>
-            <tr>
+            			<tr>
            
-                <td><?php echo $row["title"]; ?></td>
-                <td><?php echo $row["author"]; ?></td>
-                <td><?php echo $row["year"]; ?></td>
-                <td><?php echo $row["country"]; ?></td>
-                 <!-- <a href="mypage.php?delete_id=2">Delete</a> -->
-                <td><img src="images/<?php echo $row["thumbnail_url"] ?>"></td>
+                			<td><?php echo $row["title"]; ?></td>
+                			<td><?php echo $row["author"]; ?></td>
+                			<td><?php echo $row["year"]; ?></td>
+                			<td><?php echo $row["country"]; ?></td>
+                			<td><img src="images/<?php echo $row["thumbnail_url"] ?>"></td>
               
-                
-            </tr>
+            			</tr>
         <?php
             		}
         
