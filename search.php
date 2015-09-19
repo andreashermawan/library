@@ -119,9 +119,13 @@
             	}
           	}
         } else {
-          echo "0 results; nope";
+        ?>
+        	<div>
+        		<h1>No results match search criteria</h1>
+        	</div>
+        <?php
         }
-        echo "</table>";
+        //echo "</table>";
 
 
         $conn->close();
