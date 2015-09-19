@@ -69,7 +69,6 @@
 			        	country LIKE '%$book_country%'";
 			$result = $conn->query($sql);
 
-			// reading about
         	if($result->num_rows > 0) {
     ?>
     			<div class="table responsive">
@@ -85,20 +84,14 @@
           			</tr>
     <?php
           		while($row = $result->fetch_assoc()){ // start loop
-              		// print_r($row);
             		if(isset($_GET["update_book_id"]) && $_GET["update_book_id"] == $row['book_id']){
-              			// row to update
 	          			echo "<form method='POST' action='".$_SERVER["PHP_SELF"]."'><tr>";
 	          			echo "<input type='hidden' name='update_flag' value=".$row['book_id'] .">";
 	          			echo "<td><input name='book_title' value=".$row["title"]."> </td>";
 	          			echo "<td><input name='book_author' value=".$row["author"]."> </td>";
 	          			echo "<td><input name='book_year' value=".$row["year"]."> </td>";
 	          			echo "<td><input name='book_country' value=".$row["country"]."> </td>";
-	          			// echo "<td>submit</td></form></tr>";
-              
-
             		} else {
-              			// normal rows
     ?>
             			<tr>
            
