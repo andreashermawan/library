@@ -95,13 +95,13 @@ table{
     min-height: 500px;
 
 }
-.featured-book{
+/*.featured-book{
 	bottom: 1px solid black;
 	max-height: 500px;
 
-}
+}*/
 .fix-search{
-	position: fixed;
+	position: relative;
 	padding-top: 5em;
 
 }
