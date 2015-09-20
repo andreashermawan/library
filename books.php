@@ -78,10 +78,35 @@ $result = $conn->query($sql);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>browse books</title>
+    <title>search books</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
+  <body>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead">Literatura hispanoamericana</span></a>
+        </div><!-- navbar-header -->
+        <div class="collapse navbar-collapse" id="collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="search.php">Search</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li class="active"><a href="#featured">Browse</a></li>
+          </ul>        
+        </div><!-- collapse navbar-collapse -->
+      </div><!-- container -->
+    </nav>
+
+  </header>
   <body>
     <div class="content container">
       <h2>Browse books</h2>

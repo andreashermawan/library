@@ -11,14 +11,30 @@ light: gris#C5C7B6, crema#FFF8D3*/
 body{
   font-size: 1.6em;
   position: relative;
-  background: #C5C7B6;
+  background: white;
+  max-width: 1244px;
+  float: center;
 }
+.container {
+	max-width: 1244px;
+}
+div {
+    display: block;
+}
+
 
 h1, h2, h3, h4, h5, h6, p {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   margin-top: 0;
+  color: black;
 }
+h1 {
+	font-family: "Roboto-Slab";
+	font-weight: 700;
+	font-size: 3em;
+}
+
 h2 {
 	color: #222028;
 	margin: 0.5em;
@@ -66,4 +82,114 @@ table{
 }
 .search-form{
 	padding: 1.5em;
+}
+.jumbotron {
+   /* margin-bottom: 0px;*/
+    background-image: url(../images/Ay-amor.png);
+  /*  background-position: 0% 25%;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    position: relative;
+   /* max-height: 500px;*/
+    min-height: 500px;
+
+}
+.featured-book{
+	bottom: 1px solid black;
+	max-height: 500px;
+
+}
+.fix-search{
+	position: fixed;
+	padding-top: 5em;
+
+}
+.subhead {
+	padding-bottom: 2em;
+}
+.navbar-default {
+    background-color: #ffffff;
+    border-color: none;
+    padding-top: 45px;
+    padding-bottom: 47px;
+}
+.navbar-default .navbar-nav {
+    padding-top: 18px;
+}
+header .navbar {
+	font-size: 1.5em;
+	/*padding: 30px 0;*/
+	font-family: "Open Sans", sans-serif;
+	text-shadow: none;
+}
+header .navbar-default {
+	background-color: white;
+	border: none;
+
+}
+header .navbar-default .navbar-nav{
+	padding-top: 1em;
+}   
+header .navbar-default .navbar-nav a {
+	background-color: transparent;
+	padding: 5px 8px;
+}
+header .navbar-default .navbar-nav a:hover{
+	color: #b9da37;
+	background-color: transparent;
+}
+header .navbar-default .navbar-nav .active a {
+	color: #b9da37;
+	border-bottom: 5px #b9da37;
+	background-color: transparent;
+}
+header .navbar-default .navbar-nav .active a:hover {
+	color: #b9da37;
+	background: transparent;
+}
+.navbar .container .navbar-brand, .navbar .container-fluid .navbar-brand {
+	color: #E0E0E0;
+}
+/**  Carousel Fade **/
+
+.carousel.fade {
+  opacity: 1;
+}
+
+.carousel.fade .item {
+  transition: opacity ease-out .7s;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+
+.carousel.fade .item:first-child {
+  top: auto;
+  opacity: 0;
+  position: relative;
+}
+
+.carousel.fade .item.active {
+  opacity: 1;
+}
+
+.carousel-control {
+  opacity: 0;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+}
+
+#featured .item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 }

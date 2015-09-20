@@ -9,30 +9,63 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
-	<body>
-		<div class="content container">
-		  <h2>Search</h2>
-		    <div class="content">
-		        <form class="search-form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
-		        	<div class="col-md-4">
-						<label class="entrada" for="">Search by Author</label>
-						<input class="col-md-12" type="text" name="book_author">
-					</div>
-					<div class="col-md-4">
-						<label class="entrada" for="">Search by Title</label>
-						<input class="col-md-12" type="text" name="book_title">
-					</div>
-					<div class="col-md-4">
-						<label class="entrada" for="">Search by Country</label>
-						<input class="col-md-12" type="text" name="book_country">
-					</div>
-					<!-- <button type="submit">go</button> -->
-					<div class="col-md-12 entrada">
-		                <button class="btn btn-lg" type="submit">Go</button>
-		            </div>
-				</form>
-		    </div>
-		    <div>
+<body>
+	<header>
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead"><p>Literatura hispanoamericana</p></span></a>
+	        </div><!-- navbar-header -->
+	        <div class="collapse navbar-collapse" id="collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li class="active"><a href="#featured">Search</a></li>
+	            <li><a href="#about">About</a></li>
+	            <li><a href="#events">Events</a></li>
+	            <li><a href="books.php">Browse</a></li>
+	          </ul>        
+	        </div><!-- collapse navbar-collapse -->
+	      </div><!-- container -->
+	    </nav>
+	</header>
+		<div class="container">
+			<div class="fix-search" id="search">
+			  <h2>Search</h2>
+			    <div class="row">
+			        <form class="search-form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+			        	<div class="col-md-4">
+							<label class="entrada" for="">Search by Author</label>
+							<input class="col-md-12" type="text" name="book_author">
+						</div>
+						<div class="col-md-4">
+							<label class="entrada" for="">Search by Title</label>
+							<input class="col-md-12" type="text" name="book_title">
+						</div>
+						<div class="col-md-4">
+							<label class="entrada" for="">Search by Country</label>
+							<input class="col-md-12" type="text" name="book_country">
+						</div>
+						<!-- <button type="submit">go</button> -->
+						<div class="col-md-12 entrada">
+			                <button class="btn btn-lg" type="submit">Go</button>
+			            </div>
+					</form>
+			    </div>
+			</div>
+			<div>
+		  		<div class="col-sm-6">
+		  			<img  src="images/Ay-amor.png" class="img-responsive featured-book">
+		  		</div>
+		  		<div class=" col-sm-6">
+		  			<h3>September featured book:</h3><h2> Ay Amor</h2>
+		  		</div>
+		  	</div>
+		</div>
 
 	<?php 
        
@@ -127,10 +160,10 @@
     	}
     ?>
 
-	   </div>
-		</div>
+	  
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/myscript.js"></script>
 	</body>
 </html>
