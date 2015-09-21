@@ -17,6 +17,9 @@ body{
 }
 .container {
 	max-width: 1244px;
+	float:none;
+	margin-left: auto;
+	margin-right: auto;
 }
 div {
     display: block;
@@ -95,11 +98,11 @@ table{
     min-height: 500px;
 
 }
-/*.featured-book{
-	bottom: 1px solid black;
-	max-height: 500px;
+.featured-book{
+	margin: 1px solid black;
+	
 
-}*/
+}
 .fix-search{
 	position: relative;
 	padding-top: 5em;
@@ -129,7 +132,7 @@ header .navbar-default {
 
 }
 header .navbar-default .navbar-nav{
-	padding-top: 1em;
+	padding-top: 1.6em;
 }   
 header .navbar-default .navbar-nav a {
 	background-color: transparent;
@@ -192,4 +195,10 @@ header .navbar-default .navbar-nav .active a:hover {
   background-position: center center;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 768px) {
+
+	h1{
+		font-size: 1.6em;
+	}
 }

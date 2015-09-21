@@ -24,8 +24,8 @@
 	        </div><!-- navbar-header -->
 	        <div class="collapse navbar-collapse" id="collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	          	<li><a href="#about">Home</a></li>
-	            <li class="active"><a href="#featured">Search</a></li>
+	          	<li class="active"><a href="#featured">Home</a></li>
+	            <li><a href="search.php">Search</a></li>
 	            <li><a href="books.php">Browse</a></li>
 	          </ul>        
 	        </div><!-- collapse navbar-collapse -->
