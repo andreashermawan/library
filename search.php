@@ -24,7 +24,7 @@
 	        </div><!-- navbar-header -->
 	        <div class="collapse navbar-collapse" id="collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	          	<li><a href="#about">Home</a></li>
+	          	<li><a href="index.php">Home</a></li>
 	            <li class="active"><a href="#featured">Search</a></li>
 	            <li><a href="books.php">Browse</a></li>
 	          </ul>        
@@ -57,36 +57,8 @@
 			    </div>
 			</div>
 			<div>
-		  		<div class="col-sm-6">
-		  			<img  src="images/Ay-amor.png" class="img-responsive featured-book">
-		  		</div>
-		  		<div class=" col-sm-6">
-		  			<h3>September featured book:</h3><h2> Ay Amor</h2>
-		  			<?php
-			  			require('dvconnect.inc.php');
-
-						$conn = new mysqli($host, $db_user, $db_password, $dbname);
-
-						// Check connection
-						
-						if ($conn->connect_error) {
-				    		die("Connection failed: " . $conn->connect_error);
-						}
-
-
-
-						$sql = "SELECT about 
-						        FROM books 
-						        WHERE book_id = 6";
-						$conn->query("set character_set_results='utf8'");   
-						$result = $conn->query($sql);
-
-			        	if($result->num_rows > 0) {
-			        		$row = $result->fetch_assoc();
-			        		echo "<p>".$row["about"]."</p>";
-			        	}
-			        	$conn->close();
-        			?>
+		  	
+		  		
 		  		</div>
 		  	</div>
 		</div>
