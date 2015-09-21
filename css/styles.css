@@ -18,15 +18,30 @@ body{
 }
 .wrapper {
 	margin-top: 15em;
-	width: 980px;
+	max-width: 980px;
 	margin-left: auto;
 	margin-right: auto;
 }
 .row{
-	padding-top: 15em;
+	padding-top: 10em;
+}
+.search {
+
+	padding: 3em;
+	background: #b9da37;
+	color: #333333;
+}
+.results {
+	padding: 3em;
+}
+.page {
+	margin-top: 7em;
 }
 div {
     display: block;
+}
+input.col-md-12.col-xs-12 {
+    font-size: 1.6em;
 }
 
 
@@ -44,10 +59,14 @@ h1 {
 
 h2 {
 	color: #222028;
-	margin: 0.5em;
+/*	margin: 0.5em;*/
 }
+
 .entrada {
 	padding: 0.2em;
+	font-size: 1.6em;
+	font-weight: 300;
+	color: black;
 }
 
 .btn-lg{
@@ -76,16 +95,16 @@ input:focus{
 	/*border: 1px solid #2F3837;*/
 	outline: none;
 }
-table{
-	padding-left: 0;
-	padding-right: 0;
-}
 .col {
 	padding: 0;
 	margin: 0;
 }
-.table .table {
+.table {
+	margin: 1em;
     background-color: #FFF8D3;
+    overflow: scroll;
+    margin-right: auto;
+    margin-left: auto;
 }
 .search-form{
 	padding: 1.5em;
@@ -161,4 +180,14 @@ header .navbar-default .navbar-nav .active a:hover {
 	h1{
 		font-size: 1.6em;
 	}
+	.navbar .container .navbar-brand, .navbar .container-fluid .navbar-brand {
+    color: #E0E0E0;
+    margin-top: -3em;
+	}
+	.search {
+    padding: 1em;
+	}
+	.page {
+	margin-top: 1em;
+}
 }

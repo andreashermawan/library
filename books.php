@@ -93,7 +93,7 @@ $result = $conn->query($sql);
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead"><p>Literatura hispanoamericana</p></span></a>
+            <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead"><h2>Literatura hispanoamericana</h2></span></a>
           </div><!-- navbar-header -->
           <div class="collapse navbar-collapse" id="collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -109,66 +109,68 @@ $result = $conn->query($sql);
     <div class="content container">
       <h2>Browse books</h2>
 
-
-      <div class="table responsive">
-        <table class="table table-striped">
-          <tr>
-            
-            <td>title</td>
-            <td>author</td>
-            <td>Year</td>
-            <td>country</td>
-            <td>image</td>
-          
-          </tr>
-
-
-       <?php 
-        if($result->num_rows > 0){
-          while($row = $result->fetch_assoc()){ // start loop
-              // print_r($row);
-            if(isset($_GET["update_book_id"]) && $_GET["update_book_id"] == $row['book_id']){
-              // row to update
-              echo "<form method='POST' action='".$_SERVER["PHP_SELF"]."'><tr>";
-              echo "<input type='hidden' name='update_flag' value=".$row['book_id'] .">";
-              echo "<td><input name='book_title' value=".$row["title"]."> </td>";
-              echo "<td><input name='book_author' value=".$row["author"]."> </td>";
-              echo "<td><input name='book_year' value=".$row["year"]."> </td>";
-              echo "<td><input name='book_country' value=".$row["country"]."> </td>";
-              // echo "<td>submit</td></form></tr>";
-              
-
-            } else {
-              // normal rows
-              ?>
+      <div class="row">
+        <div class="table responsive">
+          <table class="table table-striped">
             <tr>
-           
-                <td><?php echo $row["title"]; ?></td>
-                <td><?php echo $row["author"]; ?></td>
-                <td><?php echo $row["year"]; ?></td>
-                <td><?php echo $row["country"]; ?></td>
-                 <!-- <a href="mypage.php?delete_id=2">Delete</a> -->
-                <td><img src="images/<?php echo $row["thumbnail_url"] ?>"></td>
+              
+              <td>title</td>
+              <td>author</td>
+              <td>Year</td>
+              <td>country</td>
+              <td>image</td>
+            
             </tr>
-              <?php
+
+
+         <?php 
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){ // start loop
+                // print_r($row);
+              if(isset($_GET["update_book_id"]) && $_GET["update_book_id"] == $row['book_id']){
+                // row to update
+                echo "<form method='POST' action='".$_SERVER["PHP_SELF"]."'><tr>";
+                echo "<input type='hidden' name='update_flag' value=".$row['book_id'] .">";
+                echo "<td><input name='book_title' value=".$row["title"]."> </td>";
+                echo "<td><input name='book_author' value=".$row["author"]."> </td>";
+                echo "<td><input name='book_year' value=".$row["year"]."> </td>";
+                echo "<td><input name='book_country' value=".$row["country"]."> </td>";
+                // echo "<td>submit</td></form></tr>";
+                
+
+              } else {
+                // normal rows
+                ?>
+              <tr>
+             
+                  <td><?php echo $row["title"]; ?></td>
+                  <td><?php echo $row["author"]; ?></td>
+                  <td><?php echo $row["year"]; ?></td>
+                  <td><?php echo $row["country"]; ?></td>
+                   <!-- <a href="mypage.php?delete_id=2">Delete</a> -->
+                  <td><img src="images/<?php echo $row["thumbnail_url"] ?>"></td>
+              </tr>
+                <?php
+              }
+          
+              if($row_class == "odd"){
+                $row_class = "even";
+              } else if($row_class == "even") {
+                $row_class = "odd";
+              }
             }
-        
-            if($row_class == "odd"){
-              $row_class = "even";
-            } else if($row_class == "even") {
-              $row_class = "odd";
-            }
+          } else {
+            echo "0 results; nope";
           }
-        } else {
-          echo "0 results; nope";
-        }
-        echo "</table>";
-        $conn->close();
-        ?>
-        </table>
+          echo "</table>";
+          $conn->close();
+          ?>
+          </table>
+          </div>
        </div>    
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

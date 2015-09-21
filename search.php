@@ -20,7 +20,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead"><p>Literatura hispanoamericana</p></span></a>
+	          <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead"><h2>Literatura hispanoamericana</h2></span></a>
 	        </div><!-- navbar-header -->
 	        <div class="collapse navbar-collapse" id="collapse">
 	          <ul class="nav navbar-nav navbar-right">
@@ -35,25 +35,27 @@
 		<div class="container">
 			<div class="fix-search" id="search">
 			  <h2>Search</h2>
-			    <div class="row">
-			        <form class="search-form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
-			        	<div class="col-md-4 col-xs-12">
-							<label class="entrada col-xs-12" for="">Search by Author</label>
-							<input class="col-md-12 col-xs-12" type="text" name="book_author">
-						</div>
-						<div class="col-md-4 col-xs-12">
-							<label class="entrada" for="">Search by Title</label>
-							<input class="col-md-12 col-xs-12" type="text" name="book_title">
-						</div>
-						<div class="col-md-4 col-xs-12">
-							<label class="entrada" for="">Search by Country</label>
-							<input class="col-md-12 col-xs-12" type="text" name="book_country">
-						</div>
-						<!-- <button type="submit">go</button> -->
-						<div class="col-md-12 col-xs-12 entrada">
-			                <button class="btn btn-lg" type="submit">Go</button>
-			            </div>
-					</form>
+			  <div class="page">
+				    <div class="row search">
+				        <form class="search-form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+				        	<div class="col-md-4 col-xs-12">
+								<label class="entrada col-xs-12" for="">Search by Author</label>
+								<input class="col-md-12 col-xs-12" type="text" name="book_author">
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<label class="entrada" for="">Search by Title</label>
+								<input class="col-md-12 col-xs-12" type="text" name="book_title">
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<label class="entrada" for="">Search by Country</label>
+								<input class="col-md-12 col-xs-12" type="text" name="book_country">
+							</div>
+							<!-- <button type="submit">go</button> -->
+							<div class="col-md-12 col-xs-12 entrada">
+				                <button class="btn btn-lg" type="submit">Go</button>
+				            </div>
+						</form>
+				    </div>
 			    </div>
 			</div>
 			<div>
@@ -146,7 +148,7 @@
     <?php
         	} else {
     ?>
-        		<div>
+        		<div class="results centered">
         			<h1>No results match search criteria</h1>
         		</div>
     <?php
@@ -155,11 +157,9 @@
         	$conn->close();
     	}
     ?>
-
-	  
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="js/bootstrap.min.js"></script>
-	    <script src="js/myscript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
