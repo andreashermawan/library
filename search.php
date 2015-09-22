@@ -102,8 +102,9 @@
 
         	if($result->num_rows > 0) {
     ?>
+    		<div class="content-container">
     		<div class="page">
-    		<div class="row">
+    		<div class="row results">
     			<div class="table responsive">
         			<table class="table table-striped">
           			<tr>
@@ -147,6 +148,7 @@
     ?>
     				</table>
        			</div> 
+       		</div>
        		</div>
        		</div>
     <?php

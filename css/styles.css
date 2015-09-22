@@ -54,11 +54,17 @@ h1 {
 	font-family: "Roboto-Slab";
 	font-weight: 300;
 	font-size: 2em;
+	padding-left: 0;
+	margin-left: 0;
+
 }
 
 h2 {
 	color: #222028;
 /*	margin: 0.5em;*/
+}
+p {
+	font-size: 1.2em;
 }
 
 .entrada {
@@ -106,6 +112,7 @@ input:focus{
     margin-left: auto;
     font-size: 1.2em;
 }
+
 .search-form{
 	padding: 1.5em;
 }
@@ -132,6 +139,9 @@ input:focus{
 .navbar-default .navbar-nav {
     padding-top: 18px;
 }
+.navbar-default .navbar-nav li a {
+    color: #333333;
+}
 header .navbar {
 	font-size: 1.5em;
 	/*padding: 30px 0;*/
@@ -139,7 +149,7 @@ header .navbar {
 	text-shadow: none;
 }
 header .navbar-default {
-	background-color: white;
+	background-color: #f2f2f2;;
 	border: none;
 
 }
@@ -174,6 +184,15 @@ header .navbar-default .navbar-nav .active a:hover {
   background-position: center center;
   max-width: 80%;
   max-height: 80%;
+}
+.results {
+	padding-top: 0;
+	margin: 1em;
+    background-color: #FFF8D3;
+    overflow: scroll;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.2em;
 }
 /*footer {
     background: #f2f2f2;
