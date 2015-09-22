@@ -20,11 +20,11 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead"><h2>Literatura hispanoamericana</h2></span></a>
+	          <a class="navbar-brand" href="#featured"><a href="index.php"><h1>Library</h1></a><span class="subhead"><h2>Literatura hispanoamericana</h2></span></a>
 	        </div><!-- navbar-header -->
 	        <div class="collapse navbar-collapse" id="collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	          	<li><a href="index.php">Home</a></li>
+	          	<!-- <li><a href="index.php">Home</a></li> -->
 	            <li class="active"><a href="#featured">Search</a></li>
 	            <li><a href="books.php">Browse</a></li>
 	          </ul>        
@@ -102,6 +102,8 @@
 
         	if($result->num_rows > 0) {
     ?>
+    		<div class="page">
+    		<div class="row">
     			<div class="table responsive">
         			<table class="table table-striped">
           			<tr>
@@ -145,6 +147,8 @@
     ?>
     				</table>
        			</div> 
+       		</div>
+       		</div>
     <?php
         	} else {
     ?>

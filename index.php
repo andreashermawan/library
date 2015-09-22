@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mi Club de Lectura</title>
+    <title>Library</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
@@ -20,11 +20,11 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#featured"><h1>Mi Club de Lectura</h1><span class="subhead"><h2>Literatura hispanoamericana</h2></span></a>
+	          <a class="navbar-brand" href="#featured"><a href="index.php"><h1>Library</h1></a><span class="subhead"><h2>Literatura hispanoamericana</h2></span></a>
 	        </div><!-- navbar-header -->
 	        <div class="collapse navbar-collapse" id="collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	          	<li class="active"><a href="#featured">Home</a></li>
+	          	<!-- <li class="active"><a href="#featured">Home</a></li> -->
 	            <li><a href="search.php">Search</a></li>
 	            <li><a href="books.php">Browse</a></li>
 	          </ul>        
@@ -70,7 +70,8 @@
 			  		</div>
 		  	</div>
 		</div>
-		
+
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
