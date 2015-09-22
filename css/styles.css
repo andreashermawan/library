@@ -58,6 +58,17 @@ h1 {
 	margin-left: 0;
 
 }
+h1:hover {
+	text-decoration: none;
+	color: #b9da37;
+	background-color: transparent;
+
+}
+a:hover {
+	text-decoration: none;
+
+
+}
 
 h2 {
 	color: #222028;
