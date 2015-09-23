@@ -1,6 +1,6 @@
 <?php
 
-require('dvconnect.inc.php');
+require '../../dbconnection.inc.php';
 $title = "book table";
 // include("header.inc.php");
 $row_class = "odd";

@@ -42,7 +42,7 @@
 			  		<div class=" col-md-6">
 			  			<h3>September featured book:</h3><h2> Ay Amor</h2>
 			  			<?php
-				  			require('dvconnect.inc.php');
+				  			require '../../dbconnection.inc.php';
 
 							$conn = new mysqli($host, $db_user, $db_password, $dbname);
 
