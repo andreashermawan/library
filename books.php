@@ -5,7 +5,7 @@ $title = "book table";
 // include("header.inc.php");
 $row_class = "odd";
 // Create connection
-$conn = new mysqli($host, $db_user, $db_password, $dbname);
+$conn = new mysqli($host, $db_user, $db_password, $db_name);
 
 // Check connection
 if ($conn->connect_error) {
