@@ -55,15 +55,11 @@
 				                <button class="btn btn-lg" type="submit">Go</button>
 				            </div>
 						</form>
-				    </div>
-			    </div>
-			</div>
-			<div>
-		  	
-		  		
-		  		</div>
-		  	</div>
-		</div>
+				    </div><!-- search -->
+			    </div><!-- page -->
+			</div><!-- search -->
+		</div><!-- container -->
+		
 
 	<?php 
        
